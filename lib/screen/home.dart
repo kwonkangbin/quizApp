@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../model/model_quiz.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -8,6 +10,23 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  List<Quiz> quizs = [
+    Quiz.fromMap({
+      'title' : 'test1',
+      'candidates' : ['a', 'b', 'c', 'd'],
+      'answer' : 0
+    }),
+    Quiz.fromMap({
+      'title' : 'test2',
+      'candidates' : ['a', 'b', 'c', 'd'],
+      'answer' : 0
+    }),
+    Quiz.fromMap({
+      'title' : 'test3',
+      'candidates' : ['a', 'b', 'c', 'd'],
+      'answer' : 0
+    }),
+  ];
   @override
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
